@@ -1,8 +1,8 @@
 angular.module('footballApp',['ngRoute'])
 	.controller("MainCtrl",["$http","$scope",function($http,$scope){
-		$scope.teams = ["manchester united",
-		"arsenal",
-		"real madrid"
+		$scope.teams = ["Manchester United",
+		"Arsenal",
+		"Real Madrid"
 	];
 	}])
 	.directive('topBar', function() {

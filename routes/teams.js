@@ -13,6 +13,7 @@ var FCTeamSchema = mongoose.Schema({
 	manager : String,
 	players : [{
 		name : String,
+		imgsrc : String,
 		country : String,
 		position : String,
 		age : Number,
@@ -24,11 +25,26 @@ var FCTeamSchema = mongoose.Schema({
 	}]
 });
 
-var football = mongoose.model('Football',FCTeamSchema)
+var footballs = mongoose.model('footballs',FCTeamSchema);
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
+});
+
+
+router.get('/:team',function(req, res,next){
+	var team= req.params.team;
+	console.log(team);
+	footballs.findOne({'name' : team},function(err,data){
+		if(err){
+			console.log(err);
+		}
+		else{
+			console.log(data);
+			res.send(data);
+		}
+	});
 });
 
 module.exports = router;

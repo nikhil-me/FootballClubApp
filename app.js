@@ -31,7 +31,7 @@ app.use('/teams',teams);
 /************************************************************
 * Start the mongoose connection
 *************************************************************/
-mongoose.connect("mongodb://localhost/football");
+mongoose.connect("mongodb://localhost/footballs");
 
 
 // catch 404 and forward to error handler
