@@ -6,4 +6,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+router.get('/:team',function(req, res,next){
+	var team= req.params.team;
+});
 module.exports = router;

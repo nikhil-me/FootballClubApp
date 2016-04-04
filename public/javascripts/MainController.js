@@ -11,5 +11,3 @@ angular.module('footballApp',['ngRoute'])
 	  	 	templateUrl: '/views/elements/top-bar.html',
 	  };
 	});
-
-

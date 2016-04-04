@@ -3,12 +3,11 @@ angular.module('footballApp')
 
 	$routeProvider
 
-	.when('/football', {
+	.when('/:team', {
 
 		templateUrl: '/views/teamDetails.html',
 		controller: "TeamController"
 	})
-
 	.otherwise('/football');
 
 });
