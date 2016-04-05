@@ -13,7 +13,7 @@ var FCTeamSchema = mongoose.Schema({
 	manager : String,
 	players : [{
 		name : String,
-		imgsrc : String,
+		imagesrc : String,
 		country : String,
 		position : String,
 		age : Number,
